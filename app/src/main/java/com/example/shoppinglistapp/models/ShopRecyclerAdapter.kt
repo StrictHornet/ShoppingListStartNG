@@ -22,7 +22,13 @@ class ShopRecyclerAdapter(private val shopList: List<ShopList>): RecyclerView.Ad
 
         holder.imageView.setImageResource(currentItem.imageResource)
         holder.textView.text = currentItem.title
+
+        holder.itemView.setOnClickListener {
+            holder.textView.text = "Shopping Item was clicked!"
+        }
     }
+
+
 
     class ShopViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val imageView: ImageView = itemView.findViewById(R.id.image_view)
